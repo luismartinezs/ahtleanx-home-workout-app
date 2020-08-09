@@ -1,0 +1,35 @@
+{
+  "workout_a": {
+    "groups": [
+      {
+        "name": "Anterior lower (squat)",
+        "exercises": [
+          {
+            "name": "Alternate single leg box squats",
+            "label": "1A",
+            "versions": [
+              {
+                "label": "advanced",
+                "images": [
+                  "1A-001.png",
+                  "1A-002.png",
+                  "1A-003.png",
+                  "1A-004.png"
+                ]
+              },
+              {
+                "label": "beginner",
+                "images": [
+                  "1A-005.png",
+                  "1A-006.png",
+                  "1A-007.png",
+                  "1A-008.png"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
