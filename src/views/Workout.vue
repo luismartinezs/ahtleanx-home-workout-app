@@ -4,7 +4,7 @@
       <exercise-video />
     </div>
     <div>
-    Timer
+    <the-timer />
     </div>
     <div>
       <span>Previous</span>
@@ -17,11 +17,12 @@
 <script>
 import { createNamespacedHelpers } from 'vuex'
 import ExerciseVideo from '@/components/ExerciseVideo.vue'
+import TheTimer from '@/components/TheTimer.vue'
 const { mapGetters, mapActions } = createNamespacedHelpers('workout')
 
 export default {
   name: 'Workout',
-  components: { ExerciseVideo },
+  components: { ExerciseVideo, TheTimer },
   computed: {
     ...mapGetters({
       currentExercise: 'getCurrentExercise'
