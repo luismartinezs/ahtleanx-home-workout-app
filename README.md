@@ -37,6 +37,91 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+## Workout
+
+1. SQUAT / ANTERIOR (1 MINUTE PER EXERCISE / REST-PAUSE IF NEEDED)
+Alt. Single Leg Box Squats (use low box if advanced / higher box for beginners)
+1 1/2 Bottomed Out Squats (to failure)
+Jump Squats
+
+2. UPPER PUSH (1 MINUTE PER EXERCISE / REST-PAUSE IF NEEDED)
+Handstand Pushups OR Power Pushaways
+Rotational Pushups OR Knee Rotational Pushups
+Cobra Pushups (long head contracted) OR Knee Cobra Pushups
+
+3. HINGE / POSTERIOR (1 MINUTE PER EXERCISE / REST-PAUSE IF NEEDED)
+Alt. Single Leg Heel Touch Squats (use “kickstand” if needed)
+Alt. Sprinter Lunges
+Plyo Sprinter Lunges (jump from higher position if more beginner)
+
+4. UPPER PULL (1 MINUTE PER EXERCISE / REST-PAUSE IF NEEDED)
+Pullups OR Seated Pullups
+Human Pullovers OR BW Sliding Pulldowns
+Inverted Chin Curls
+
+5. ABS (1 MINUTE PER EXERCISE / REST-PAUSE IF NEEDED)
+Reverse Corkscrews
+Black Widow Knee Slides
+Levitation Crunches
+
+6. CORRECTIVE (1 MINUTE PER EXERCISE / REST-PAUSE IF NEEDED)
+Angels and Devils
+
+COMPLETE 1-2 MORE ROUNDS (TOTAL WORKOUT TIME: 35-50 MINUTES)
+
+Here is how to construct the perfect home workout B:
+
+1. HINGE / POSTERIOR x 3 ROUNDS
+Slick Floor Bridge Curl (Single Leg) OR Slick Floor Bridge Curl (Dual Leg)
+Long Leg March
+High Hip Bucks
+
+2. LUNGE / ANTERIOR x 3 ROUNDS
+Alt. Crossover Step Ups
+Alt. Reverse Lunges
+Split Squat Jumps
+
+3. UPPER PUSH x 3 ROUNDS
+Variable Wall Pushups OR Knee Decline Pushups to Knee Flat Pushups
+Alt. BW Side Lateral Raises (from knees for beginners)
+Tricep BW Extensions (long head stretch)
+
+4. UPPER PULL x 3 ROUNDS
+Chin Ups OR Seated Chin Ups
+Inverted Rows
+Back Widows
+
+5. ABS x 2 ROUNDS
+Ab Halos
+V-Up Tucks
+Sit-Up Elbow Thrusts
+
+6. CORRECTIVE x 2 ROUNDS
+Reverse Hypers
+
+## Workout labels
+
+workout A
+1A advanced
+1A beginner
+1B all
+1C all
+2A advanced
+2A beginner
+2B advanced
+2B beginner
+2C advanced
+2C beginner
+...
+6 all
+
+workout B
+...
+
+Asset naming:
+a-1a-adv
+a-1a-beg
+a-1b-all
 
 ## Data structure
 
@@ -66,3 +151,9 @@ Exercise:
 Group:
   Name
   Exercises []
+
+## Components
+
+- Container that shows short video in a loop
+- Component that pre-loads a list of videos
+- Service worker that stores a list of media assets in browser cache
