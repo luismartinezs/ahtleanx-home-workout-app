@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="text-gray-100 bg-gray-900 h-screen">
     <the-header />
     <router-view />
   </div>
@@ -15,3 +15,5 @@ export default {
   }
 }
 </script>
+
+<style src="./style/tailwind.css"></style>

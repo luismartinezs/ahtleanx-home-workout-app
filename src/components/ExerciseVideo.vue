@@ -1,7 +1,7 @@
 <template>
   <div class="video-wrapper">
     <video loop="true" preload="auto" autoplay="true" class="responsive-video">
-      <source src="@/assets/a-1a-adv.mp4" type="video/mp4" />
+      <source src="/video/a-1a-adv.mp4" type="video/mp4" />
       Sorry, your browser doesn't support embedded videos.
     </video>
   </div>
