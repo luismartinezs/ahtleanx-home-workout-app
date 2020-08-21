@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
+
+.btn {
+  @apply inline-block px-4 py-2 uppercase tracking-wider cursor-pointer text-center;
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn-secondary {
+  @apply border border-white;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-800;
+}
+
 @tailwind utilities;

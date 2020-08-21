@@ -15,7 +15,8 @@
                   "1A-002.png",
                   "1A-003.png",
                   "1A-004.png"
-                ]
+                ],
+                "video": "a-1a-adv"
               },
               {
                 "label": "beginner",
@@ -24,7 +25,19 @@
                   "1A-006.png",
                   "1A-007.png",
                   "1A-008.png"
-                ]
+                ],
+                "video": "a-1a-beg"
+              }
+            ]
+          },
+          {
+            "name": "1/2 Bottomed Out Squats",
+            "label": "1B",
+            "versions": [
+              {
+                "label": "all",
+                "images": [],
+                "video": null
               }
             ]
           }

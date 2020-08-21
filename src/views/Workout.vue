@@ -1,15 +1,10 @@
 <template>
   <div>
     <div>
-      <exercise-video />
+      <ExerciseVideo />
     </div>
     <div>
-    <the-timer />
-    </div>
-    <div>
-      <span>Previous</span>
-      <span>Exit</span>
-      <span>Next</span>
+      <TheTimer />
     </div>
   </div>
 </template>
