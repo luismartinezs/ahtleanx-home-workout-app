@@ -13,7 +13,7 @@
 </template>
 
 <script>
-const initialTime = 60
+const initialTime = 1000 // miliseconds
 
 // seconds is never larger than 60
 function parseSeconds (numberOfSeconds) {
@@ -57,7 +57,7 @@ export default {
         : 'tap anywhere to pause'
     },
     timer () {
-      return parseSeconds(this.currentTime)
+      return parseSeconds(Math.floor(this.currentTime / 1000))
     }
   },
   methods: {
@@ -65,16 +65,15 @@ export default {
       this.started = true
       this.paused = !this.paused
       clearInterval(this.countdown)
-      // if (this.countdown) {
-      // }
 
       if (!this.paused) {
+        const refreshRate = 100 // miliseconds
         this.countdown = setInterval(() => {
           if (this.currentTime === 0) {
             this.handleTimerEnd()
           }
-          this.currentTime -= 1
-        }, 1000)
+          this.currentTime -= refreshRate
+        }, refreshRate)
       }
     },
     handleTimerEnd () {
