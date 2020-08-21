@@ -1,17 +1,21 @@
 <template>
   <div id="app" class="text-gray-100 bg-gray-900 h-screen">
     <the-header />
-    <router-view />
+    <default>
+      <router-view />
+    </default>
   </div>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader.vue'
+import Default from '@/layouts/Default.vue'
 
 export default {
   name: 'App',
   components: {
-    TheHeader
+    TheHeader,
+    Default
   }
 }
 </script>
