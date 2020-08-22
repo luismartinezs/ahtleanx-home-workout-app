@@ -1,7 +1,7 @@
 <template>
   <header class="flex justify-between w-full bg-red-400 text-red-100 py-3 px-4">
     <div>
-      <h1 class="text-lg uppercase font-semibold">
+      <h1 class="text-sm uppercase font-semibold">
         Athleanx perfect home workout
       </h1>
     </div>

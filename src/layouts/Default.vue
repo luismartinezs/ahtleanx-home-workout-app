@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto w-screen max-w-sm">
+  <div class="mx-auto w-full">
     <slot></slot>
   </div>
 </template>

@@ -56,6 +56,8 @@ module.exports = {
         '11/12': '91.666667%'
       },
       fontSize: {
+        '8xl': '6rem',
+        '10xl': '8rem',
         huge: '10rem'
       }
     }

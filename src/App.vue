@@ -3,12 +3,10 @@
     id="app"
     class="text-gray-100 bg-gray-900 h-screen flex flex-col justify-between"
   >
-    <div>
-      <the-header class="z-20" />
-      <default>
-        <router-view />
-      </default>
-    </div>
+    <the-header class="z-20" />
+    <default class="flex-auto">
+      <router-view />
+    </default>
     <BottomNav class="z-20" v-if="$route.meta.showBottomNav" />
   </div>
 </template>

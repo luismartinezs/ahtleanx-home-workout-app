@@ -1,9 +1,8 @@
 <template>
   <div
-    class="flex flex-col justify-center items-center h-64"
-    @click="handleTimer"
+    class="flex flex-col justify-center items-center"
   >
-    <span class="text-huge">
+    <span class="text-10xl">
       {{ timer }}
     </span>
     <span class="text-xl">
@@ -13,7 +12,9 @@
 </template>
 
 <script>
-const initialTime = 1000 // miliseconds
+import { eventBus } from '@/eventBus.js'
+
+const initialTime = 60 * 1000 // miliseconds
 
 // seconds is never larger than 60
 function parseSeconds (numberOfSeconds) {
@@ -89,6 +90,12 @@ export default {
         this.currentTime = initialTime
       })
     }
+  },
+  mounted () {
+    eventBus.$on('toggle-timer', this.handleTimer)
+  },
+  beforeDestroy () {
+    eventBus.$off('toggle-timer', this.handleTimer)
   }
 }
 </script>
