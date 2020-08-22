@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Workout from '../views/Workout.vue'
-import Dev from '@/views/Dev.vue'
+const Home = () => import('@/views/Home.vue')
+const Workout = () => import('@/views/Workout.vue')
+const CompletedWorkout = () => import('@/views/CompletedWorkout.vue')
+const Dev = () => import('@/views/Dev.vue')
 
 Vue.use(VueRouter)
 
@@ -19,6 +20,14 @@ const routes = [
     path: '/dev',
     name: 'Dev',
     component: Dev
+  },
+  {
+    path: '/workout/:day/complete',
+    name: 'CompletedWorkout',
+    component: CompletedWorkout,
+    meta: {
+      showBottomNav: false
+    }
   },
   {
     path: '/workout/:day',

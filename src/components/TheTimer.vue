@@ -80,7 +80,6 @@ export default {
     handleTimerEnd () {
       clearInterval(this.countdown)
       this.paused = true
-      this.$emit('timerEnd')
       // Play sound
 
       playAlarm()
@@ -89,6 +88,7 @@ export default {
       this.$nextTick(() => {
         this.currentTime = initialTime
       })
+      eventBus.$emit('timer-end')
     }
   },
   mounted () {

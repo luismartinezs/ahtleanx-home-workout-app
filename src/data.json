@@ -5,38 +5,86 @@
         "name": "Anterior lower (squat)",
         "exercises": [
           {
-            "name": "Alternate single leg box squats",
             "label": "1A",
             "versions": [
               {
+                "name": "Alt. Single Leg Box Squats (low box)",
                 "label": "advanced",
-                "images": [
-                  "1A-001.png",
-                  "1A-002.png",
-                  "1A-003.png",
-                  "1A-004.png"
-                ],
                 "video": "a-1a-adv"
               },
               {
+                "name": "Alt. Single Leg Box Squats (high box)",
                 "label": "beginner",
-                "images": [
-                  "1A-005.png",
-                  "1A-006.png",
-                  "1A-007.png",
-                  "1A-008.png"
-                ],
                 "video": "a-1a-beg"
               }
             ]
           },
           {
-            "name": "1/2 Bottomed Out Squats",
             "label": "1B",
             "versions": [
               {
+                "name": "1/2 Bottomed Out Squats",
                 "label": "all",
-                "images": [],
+                "video": null
+              }
+            ]
+          },
+          {
+            "label": "1C",
+            "versions": [
+              {
+                "name": "Jump Squats",
+                "label": "all",
+                "video": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper push",
+        "exercises": [
+          {
+            "label": "2A",
+            "versions": [
+              {
+                "name": "Handstand Pushups",
+                "label": "advanced",
+                "video": null
+              },
+              {
+                "name": "Power Pushaways",
+                "label": "beginner",
+                "video": null
+              }
+            ]
+          },
+          {
+            "label": "2B",
+            "versions": [
+              {
+                "name": "Rotational Pushups",
+                "label": "advanced",
+                "video": null
+              },
+              {
+                "name": "Knee Rotational Pushups",
+                "label": "beginner",
+                "video": null
+              }
+            ]
+          },
+          {
+            "label": "2C",
+            "versions": [
+              {
+                "name": "Cobra Pushups",
+                "label": "advanced",
+                "video": null
+              },
+              {
+                "name": "Knee Cobra Pushups",
+                "label": "beginner",
                 "video": null
               }
             ]

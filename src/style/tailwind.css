@@ -9,6 +9,14 @@
   @apply outline-none shadow-outline;
 }
 
+.btn-primary {
+  @apply bg-red-500 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-red-700;
+}
+
 .btn-secondary {
   @apply border border-white;
 }
