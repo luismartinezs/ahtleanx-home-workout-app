@@ -11,10 +11,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
-    meta: {
-      showBottomNav: false
-    }
+    component: Home
   },
   {
     path: '/dev',
@@ -24,18 +21,12 @@ const routes = [
   {
     path: '/workout/:day/complete',
     name: 'CompletedWorkout',
-    component: CompletedWorkout,
-    meta: {
-      showBottomNav: false
-    }
+    component: CompletedWorkout
   },
   {
     path: '/workout/:day',
     name: 'Workout',
-    component: Workout,
-    meta: {
-      showBottomNav: true
-    }
+    component: Workout
   }
 ]
 

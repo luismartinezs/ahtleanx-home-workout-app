@@ -16,7 +16,7 @@
 import { eventBus } from '@/eventBus.js'
 
 export default {
-  name: 'BottomNav',
+  name: 'WorkoutNav',
   methods: {
     handlePrev () {
       eventBus.$emit('prev-exercise')

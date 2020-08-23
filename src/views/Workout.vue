@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-full">
+  <div class="relative h-full flex flex-col">
     <div v-if="isLoading">
       LOADING....
     </div>
@@ -8,6 +8,7 @@
       <ExerciseDisplay class="h-1/2" />
       <TheTimer />
       <TimerToggler class="absolute h-full w-full z-10 bg-transparent top-0" />
+      <WorkoutNav class="z-20 mt-auto" />
     </template>
   </div>
 </template>
@@ -21,12 +22,13 @@ import ExerciseDisplay from '@/components/ExerciseDisplay.vue'
 import TheTimer from '@/components/TheTimer.vue'
 import TimerToggler from '@/components/TimerToggler.vue'
 import VariantToggler from '@/components/VariantToggler.vue'
+import WorkoutNav from '@/components/WorkoutNav.vue'
 
 const { mapActions, mapState } = createNamespacedHelpers('workout')
 
 export default {
   name: 'Workout',
-  components: { ExerciseDisplay, TheTimer, TimerToggler, VariantToggler },
+  components: { ExerciseDisplay, TheTimer, TimerToggler, VariantToggler, WorkoutNav },
   computed: {
     ...mapState(['isLoading']),
     currentWorkout () {

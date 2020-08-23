@@ -7,21 +7,18 @@
     <default class="flex-auto">
       <router-view />
     </default>
-    <BottomNav class="z-20" v-if="$route.meta.showBottomNav" />
   </div>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader.vue'
 import Default from '@/layouts/Default.vue'
-import BottomNav from '@/components/BottomNav.vue'
 
 export default {
   name: 'App',
   components: {
     TheHeader,
-    Default,
-    BottomNav
+    Default
   }
 }
 </script>
