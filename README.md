@@ -76,15 +76,15 @@ Slick Floor Bridge Curl (Single Leg) OR Slick Floor Bridge Curl (Dual Leg)
 Long Leg March
 High Hip Bucks
 
-2. LUNGE / ANTERIOR x 3 ROUNDS
-Alt. Crossover Step Ups
-Alt. Reverse Lunges
-Split Squat Jumps
-
-3. UPPER PUSH x 3 ROUNDS
+2. UPPER PUSH x 3 ROUNDS
 Variable Wall Pushups OR Knee Decline Pushups to Knee Flat Pushups
 Alt. BW Side Lateral Raises (from knees for beginners)
 Tricep BW Extensions (long head stretch)
+
+3. LUNGE / ANTERIOR x 3 ROUNDS
+Alt. Crossover Step Ups
+Alt. Reverse Lunges
+Split Squat Jumps
 
 4. UPPER PULL x 3 ROUNDS
 Chin Ups OR Seated Chin Ups

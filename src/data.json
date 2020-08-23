@@ -25,7 +25,7 @@
               {
                 "name": "1/2 Bottomed Out Squats",
                 "label": "all",
-                "video": null
+                "video": "a-1b-all"
               }
             ]
           },
@@ -35,7 +35,7 @@
               {
                 "name": "Jump Squats",
                 "label": "all",
-                "video": null
+                "video": "a-1c-all"
               }
             ]
           }
@@ -50,12 +50,12 @@
               {
                 "name": "Handstand Pushups",
                 "label": "advanced",
-                "video": null
+                "video": "a-2a-adv"
               },
               {
                 "name": "Power Pushaways",
                 "label": "beginner",
-                "video": null
+                "video": "a-2a-beg"
               }
             ]
           },
@@ -65,12 +65,12 @@
               {
                 "name": "Rotational Pushups",
                 "label": "advanced",
-                "video": null
+                "video": "a-1b-all"
               },
               {
                 "name": "Knee Rotational Pushups",
                 "label": "beginner",
-                "video": null
+                "video": "a-1b-all"
               }
             ]
           },
@@ -80,12 +80,361 @@
               {
                 "name": "Cobra Pushups",
                 "label": "advanced",
-                "video": null
+                "video": "a-2c-adv"
               },
               {
                 "name": "Knee Cobra Pushups",
                 "label": "beginner",
-                "video": null
+                "video": "a-2c-beg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Posterior lower (hinge)",
+        "exercises": [
+          {
+            "label": "3A",
+            "variants": [
+              {
+                "name": "Alt. Single Leg Heel Touch Squats",
+                "label": "advanced",
+                "video": "a-3a-adv"
+              },
+              {
+                "name": "Alt. Single Leg Heel Touch Squats (kickstand)",
+                "label": "beginner",
+                "video": "a-3a-beg"
+              }
+            ]
+          },
+          {
+            "label": "3B",
+            "variants": [
+              {
+                "name": "Alt. Sprinter Lunges",
+                "label": "all",
+                "video": "a-3b-all"
+              }
+            ]
+          },
+          {
+            "label": "3C",
+            "variants": [
+              {
+                "name": "Plyo Sprinter Lunges (low)",
+                "label": "advanced",
+                "video": "a-3c-adv"
+              },
+              {
+                "name": "Plyo Sprinter Lunges (high)",
+                "label": "beginner",
+                "video": "a-3c-beg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper pull",
+        "exercises": [
+          {
+            "label": "4A",
+            "variants": [
+              {
+                "name": "Pullups",
+                "label": "advanced",
+                "video": "a-4a-adv"
+              },
+              {
+                "name": "Seated Pullups",
+                "label": "beginner",
+                "video": "a-4a-beg"
+              }
+            ]
+          },
+          {
+            "label": "4B",
+            "variants": [
+              {
+                "name": "Human Pullovers",
+                "label": "advanced",
+                "video": "a-4b-adv"
+              },
+              {
+                "name": "BW Sliding Pulldowns",
+                "label": "beginner",
+                "video": "a-4b-beg"
+              }
+            ]
+          },
+          {
+            "label": "4C",
+            "variants": [
+              {
+                "name": "Inverted Chin Curls",
+                "label": "all",
+                "video": "a-4c-all"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ABS",
+        "exercises": [
+          {
+            "label": "5A",
+            "variants": [
+              {
+                "name": "Reverse Corkscrews",
+                "label": "all",
+                "video": "a-5a-all"
+              }
+            ]
+          },
+          {
+            "label": "5B",
+            "variants": [
+              {
+                "name": "Black Widow Knee Slides",
+                "label": "all",
+                "video": "a-5b-all"
+              }
+            ]
+          },
+          {
+            "label": "5C",
+            "variants": [
+              {
+                "name": "Levitation Crunches",
+                "label": "all",
+                "video": "a-5c-all"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CORRECTIVE",
+        "exercises": [
+          {
+            "label": "6A",
+            "variants": [
+              {
+                "name": "Angels and Devils",
+                "label": "all",
+                "video": "a-6a-all"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "workout_b": {
+    "groups": [
+      {
+        "name": "posterior lower (hinge)",
+        "exercises": [
+          {
+            "label": "1A",
+            "variants": [
+              {
+                "name": "Slick Floor Bridge Curl",
+                "label": "all",
+                "video": "b-1a-all"
+              }
+            ]
+          },
+          {
+            "label": "1B",
+            "variants": [
+              {
+                "name": "Long Leg March",
+                "label": "all",
+                "video": "b-1b-all"
+              }
+            ]
+          },
+          {
+            "label": "1C",
+            "variants": [
+              {
+                "name": "High Hip Bucks",
+                "label": "all",
+                "video": "b-1c-all"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper push",
+        "exercises": [
+          {
+            "label": "2A",
+            "variants": [
+              {
+                "name": "Variable Wall Pushups",
+                "label": "advanced",
+                "video": "b-2a-adv"
+              },
+              {
+                "name": "Knee Decline Pushups to Knee Flat Pushups",
+                "label": "beginner",
+                "video": "b-2a-beg"
+              }
+            ]
+          },
+          {
+            "label": "2B",
+            "variants": [
+              {
+                "name": "Alt. BW Side Lateral Raises",
+                "label": "advanced",
+                "video": "b-2b-adv"
+              },
+              {
+                "name": "Alt. BW Side Lateral Raises (from knees)",
+                "label": "beginner",
+                "video": "b-2b-beg"
+              }
+            ]
+          },
+          {
+            "label": "2C",
+            "variants": [
+              {
+                "name": "Tricep BW Extensions",
+                "label": "all",
+                "video": "b-2c-all"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "anterior lower (lunge)",
+        "exercises": [
+          {
+            "label": "3A",
+            "variants": [
+              {
+                "name": "Alt. Crossover Step Ups",
+                "label": "all",
+                "video": "b-3a-all"
+              }
+            ]
+          },
+          {
+            "label": "3B",
+            "variants": [
+              {
+                "name": "Alt. Reverse Lunges",
+                "label": "all",
+                "video": "b-3b-all"
+              }
+            ]
+          },
+          {
+            "label": "3C",
+            "variants": [
+              {
+                "name": "Split Squat Jumps",
+                "label": "all",
+                "video": "b-3c-all"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "upper pull",
+        "exercises": [
+          {
+            "label": "4A",
+            "variants": [
+              {
+                "name": "Chin Ups",
+                "label": "advanced",
+                "video": "b-4a-adv"
+              },
+              {
+                "name": "Seated Chin Ups",
+                "label": "beginner",
+                "video": "b-4a-beg"
+              }
+            ]
+          },
+          {
+            "label": "4B",
+            "variants": [
+              {
+                "name": "Inverted Rows",
+                "label": "all",
+                "video": "b-4b-all"
+              }
+            ]
+          },
+          {
+            "label": "4C",
+            "variants": [
+              {
+                "name": "Back Widows",
+                "label": "all",
+                "video": "b-4c-all"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "abs",
+        "exercises": [
+          {
+            "label": "5A",
+            "variants": [
+              {
+                "name": "Ab Halos",
+                "label": "all",
+                "video": "b-5a-all"
+              }
+            ]
+          },
+          {
+            "label": "5B",
+            "variants": [
+              {
+                "name": "V-Up Tucks",
+                "label": "all",
+                "video": "b-5b-all"
+              }
+            ]
+          },
+          {
+            "label": "5C",
+            "variants": [
+              {
+                "name": "Sit-Up Elbow Thrusts",
+                "label": "all",
+                "video": "b-5c-all"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CORRECTIVE",
+        "exercises": [
+          {
+            "label": "6A",
+            "variants": [
+              {
+                "name": "Reverse Hypers",
+                "label": "all",
+                "video": "b-6a-all"
               }
             ]
           }
