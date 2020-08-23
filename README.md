@@ -144,7 +144,7 @@ Exercises:
 
 Exercise:
   Name
-  Versions []
+  Variants []
     label: advanced / beginner / all
     image(s) / gif
 
@@ -157,3 +157,60 @@ Group:
 - Container that shows short video in a loop
 - Component that pre-loads a list of videos
 - Service worker that stores a list of media assets in browser cache
+
+## Tasks
+
+### MVP:
+
+User experience:
+- [ ] App displays all exercises for A and B sequentially
+- [ ] The last 5 seconds, once per second sound alarm
+- [ ] When timer reaches 0 sound longer alarm than in last 5 seconds
+- [ ] App displays well on mobile
+- [ ] App looks the same on desktop as it does on mobile, with mobile max width and some reasonable max height
+- [ ] When timer reaches zero, automatically switch to next group / exercise
+- [ ] When workout finishes, show complete screen
+
+PWA:
+- [ ] Workouts can be accessed offline
+
+Load data asynchronously
+- [x] Load data ascynchronously (an async function)
+- [x] Handle loading state
+
+Use Vuex store
+- [ ] Current exercise being grabbed from workout store
+- [ ] Replace eventbus emitters by store actions
+- [ ] Prev and next btns for exercises update store
+
+Other:
+- [ ] Home gives credit to Athleanx
+
+### Nice to have:
+
+Design
+- [ ] Make 'home' a bit nicer
+  - [ ] Select workout, then 2 buttons: Day A, Day B
+- [ ] Tweak fonts to make them a bit better
+- [ ] Tweak color palette, perhaps decrease contrast
+- [ ] Make timer have circumference with moving circle around
+
+User experience
+- [ ] At end of workout give option to repeat again
+- [ ] Keep in localStorage last workout done
+- [ ] Handle workout error state
+- [ ] App is fully responsive
+- [ ] Burger menu toggles
+  - [ ] Donate button
+  - [ ] Link to athleanx channel and site
+- [ ] Improve variant usability
+  - [ ] Show next / prev variant at the borders as interaction cues
+  - [ ] Switch variant with a swipe (so prev and next btns can be removed on mobile)
+  - [ ] Add red border around current variant
+  - [ ] Swiping does not trigger timer
+
+Statistics
+- [ ] Keep track of workouts and days in calendar
+- [ ] Keep track of number of times workout is done per session
+- [ ] Keep track of number of 'pauses' in each exercise, and have some measure of improvement
+- [ ] Give audio cues when an exercise performance is going to be improved on

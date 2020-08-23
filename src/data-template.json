@@ -1,0 +1,44 @@
+{
+  "workout_a": {
+    "groups": [
+      {
+        "name": "Group name",
+        "exercises": [
+          {
+            "label": "exercise label (1A, 1B, 2A...)",
+            "variants": [
+              {
+                "name": "Exercise variant name",
+                "label": "advanced | beginner | all",
+                "video": "workout-type_exercise-label_variant-label, eg a-1a-adv"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+},
+
+
+{
+  "workout_": {
+    "groups": [
+      {
+        "name": "",
+        "exercises": [
+          {
+            "label": "",
+            "variants": [
+              {
+                "name": "",
+                "label": "",
+                "video": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

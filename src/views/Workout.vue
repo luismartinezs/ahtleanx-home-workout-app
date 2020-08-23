@@ -1,41 +1,49 @@
 <template>
   <div class="relative h-full">
-    <VersionToggler class="z-20 w-full flex justify-around mt-1 text-xs" :versionLength="exerciseVersions.length" />
-    <ExerciseDisplay class="h-1/2" :versions="exerciseVersions" :groupName="currentWorkout.groups[groupIndex].name" />
-    <TheTimer  />
-    <TimerToggler class="absolute h-full w-full z-10 bg-transparent top-0" />
+    <div v-if="isLoading">
+      LOADING....
+    </div>
+    <template v-else>
+      <VariantToggler class="z-20 w-full flex justify-around mt-2 text-xs" />
+      <ExerciseDisplay class="h-1/2" />
+      <TheTimer />
+      <TimerToggler class="absolute h-full w-full z-10 bg-transparent top-0" />
+    </template>
   </div>
 </template>
 
 <script>
+// Load data first of all because the store cannot work without it, if data is ever loaded asynchronously, there will be need to add loading state and error handling
+// A best practice would be to load data asynchronously right from the start
+
+import { createNamespacedHelpers } from 'vuex'
 import ExerciseDisplay from '@/components/ExerciseDisplay.vue'
 import TheTimer from '@/components/TheTimer.vue'
 import TimerToggler from '@/components/TimerToggler.vue'
-import VersionToggler from '@/components/VersionToggler.vue'
-import data from '@/data.json'
-import { eventBus } from '@/eventBus.js'
+import VariantToggler from '@/components/VariantToggler.vue'
+
+const { mapActions, mapState } = createNamespacedHelpers('workout')
 
 export default {
   name: 'Workout',
-  components: { ExerciseDisplay, TheTimer, TimerToggler, VersionToggler },
-  data () {
-    return {
-      exerciseIndex: 0,
-      groupIndex: 0,
-      workouts: data
-    }
-  },
+  components: { ExerciseDisplay, TheTimer, TimerToggler, VariantToggler },
   computed: {
+    ...mapState(['isLoading']),
     currentWorkout () {
       return this.workouts[`workout_${this.$route.params.day}`]
     },
-    exerciseVersions () {
-      return this.currentWorkout.groups[this.groupIndex].exercises[this.exerciseIndex].versions
+    exerciseVariants () {
+      return this.currentWorkout.groups[this.groupIndex].exercises[
+        this.exerciseIndex
+      ].variants
     }
   },
   methods: {
+    ...mapActions(['fetchWorkout', 'updateLoading', 'updateError']),
     handleNext () {
-      const isLastExerciseOfGroup = this.currentWorkout.groups[this.groupIndex].exercises.length <= this.exerciseIndex
+      const isLastExerciseOfGroup =
+        this.currentWorkout.groups[this.groupIndex].exercises.length <=
+        this.exerciseIndex
       const isLastGroup = this.currentWorkout.groups.length <= this.groupIndex
 
       if (isLastExerciseOfGroup) {
@@ -54,14 +62,14 @@ export default {
       }
     }
   },
-  mounted () {
-    // eventBus.$on('prev-exercise', handlePrev)
-    eventBus.$on('next-exercise', this.handleNext)
-    eventBus.$on('timer-end', this.handleNext)
-  },
-  beforeDestroy () {
-    eventBus.$off('next-exercise', this.handleNext)
-    eventBus.$off('timer-end', this.handleNext)
+  async mounted () {
+    try {
+      await this.fetchWorkout(this.$route.params.day)
+    } catch (err) {
+      this.updateError(err)
+    } finally {
+      this.updateLoading(false)
+    }
   }
 }
 </script>

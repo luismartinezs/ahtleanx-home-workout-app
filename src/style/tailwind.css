@@ -25,4 +25,10 @@
   @apply bg-gray-800;
 }
 
+/* After hover effects, because a disabled button should not have a hover effect */
+.btn:disabled {
+  @apply opacity-50 cursor-default bg-transparent;
+}
+
+
 @tailwind utilities;

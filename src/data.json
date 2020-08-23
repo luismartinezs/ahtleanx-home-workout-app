@@ -6,7 +6,7 @@
         "exercises": [
           {
             "label": "1A",
-            "versions": [
+            "variants": [
               {
                 "name": "Alt. Single Leg Box Squats (low box)",
                 "label": "advanced",
@@ -21,7 +21,7 @@
           },
           {
             "label": "1B",
-            "versions": [
+            "variants": [
               {
                 "name": "1/2 Bottomed Out Squats",
                 "label": "all",
@@ -31,7 +31,7 @@
           },
           {
             "label": "1C",
-            "versions": [
+            "variants": [
               {
                 "name": "Jump Squats",
                 "label": "all",
@@ -46,7 +46,7 @@
         "exercises": [
           {
             "label": "2A",
-            "versions": [
+            "variants": [
               {
                 "name": "Handstand Pushups",
                 "label": "advanced",
@@ -61,7 +61,7 @@
           },
           {
             "label": "2B",
-            "versions": [
+            "variants": [
               {
                 "name": "Rotational Pushups",
                 "label": "advanced",
@@ -76,7 +76,7 @@
           },
           {
             "label": "2C",
-            "versions": [
+            "variants": [
               {
                 "name": "Cobra Pushups",
                 "label": "advanced",
