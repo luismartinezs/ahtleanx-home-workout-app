@@ -14,9 +14,6 @@
 </template>
 
 <script>
-// Load data first of all because the store cannot work without it, if data is ever loaded asynchronously, there will be need to add loading state and error handling
-// A best practice would be to load data asynchronously right from the start
-
 import { createNamespacedHelpers } from 'vuex'
 import ExerciseDisplay from '@/components/ExerciseDisplay.vue'
 import TheTimer from '@/components/TheTimer.vue'

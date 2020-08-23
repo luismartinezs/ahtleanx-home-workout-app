@@ -1,28 +1,45 @@
 <template>
   <div class="w-full flex justify-between px-3 pb-3">
-    <a class="btn btn-secondary w-3/10" href="#" @click.prevent="handlePrev">
-      <span>Previous</span>
-    </a>
+    <button
+      class="btn btn-secondary w-3/10"
+      :disabled="exerciseGlobalIdx === 0"
+      @click.prevent="handlePrev"
+    >
+      <span>&lt;&lt;</span>
+    </button>
     <a class="btn btn-secondary w-3/10" href="/">
       <span>Exit</span>
     </a>
-    <a class="btn btn-secondary w-3/10" href="#" @click.prevent="handleNext">
-      <span>Next</span>
-    </a>
+    <button
+      class="btn btn-secondary w-3/10"
+      @click.prevent="handleNext"
+    >
+      <span>&gt;&gt;</span>
+    </button>
   </div>
 </template>
 
 <script>
-import { eventBus } from '@/eventBus.js'
+import { createNamespacedHelpers } from 'vuex'
+const { mapGetters, mapState, mapActions } = createNamespacedHelpers('workout')
 
 export default {
   name: 'WorkoutNav',
+  computed: {
+    ...mapState(['exerciseIdx']),
+    ...mapGetters({ exerciseGlobalIdx: 'getExerciseGlobalIdx' }),
+    ...mapGetters(['isLastGroup', 'isLastExercise'])
+  },
   methods: {
+    ...mapActions(['handleNextExercise', 'handlePrevExercise']),
     handlePrev () {
-      eventBus.$emit('prev-exercise')
+      this.handlePrevExercise()
     },
     handleNext () {
-      eventBus.$emit('next-exercise')
+      if (this.isLastGroup && this.isLastExercise) {
+        return this.$router.push({ name: 'CompletedWorkout', params: { ...this.$route.params } })
+      }
+      this.handleNextExercise()
     }
   }
 }

@@ -42,7 +42,10 @@ const mutations = {
     state.groupIdx++
   },
   setLoading: (state, bool) => (state.isLoading = bool),
-  setError: (state, err) => (state.error = err)
+  setError: (state, err) => (state.error = err),
+  setExerciseIdx: (state, idx) => (state.exerciseIdx = idx),
+  setVariantIdx: (state, idx) => (state.variantIdx = idx),
+  setGroupIdx: (state, idx) => (state.groupIdx = idx)
 }
 
 const getters = {
@@ -59,7 +62,19 @@ const getters = {
   isLastExercise: (state, getters) =>
     getters.getExercisesLength - 1 === state.exerciseIdx,
   isLastVariant: (state, getters) =>
-    getters.getVariantsLength - 1 === state.variantIdx
+    getters.getVariantsLength - 1 === state.variantIdx,
+  getExerciseGlobalIdx: state => {
+    let re = -1
+    // eslint-disable-next-line no-labels
+    groupsLoop: for (let i = 0; i <= state.groupIdx; i++) {
+      for (let j = 0; j <= state.workout.groups[i].exercises.length; j++) {
+        re++
+        // eslint-disable-next-line no-labels
+        if (i === state.groupIdx && j === state.exerciseIdx) break groupsLoop
+      }
+    }
+    return re
+  }
 }
 
 const actions = {
@@ -74,15 +89,36 @@ const actions = {
   },
   updateVariant: ({ dispatch }, direction) =>
     dispatch('updateType', { type: 'variant', direction }),
-  updateExercise: ({ dispatch }, direction) =>
-    dispatch('updateType', { type: 'exercise', direction }),
-  updateGroup: ({ dispatch }, direction) =>
-    dispatch('updateType', { type: 'group', direction }),
+  updateExercise: ({ dispatch, commit }, direction) => {
+    dispatch('updateType', { type: 'exercise', direction })
+    // if updating exercise, it doesn't make sense to keep variant index, so it is reset
+    commit('setVariantIdx', 0)
+  },
+  updateGroup: ({ dispatch, commit }, direction) => {
+    dispatch('updateType', { type: 'group', direction })
+    // if updating group, it doesn't make sense to keep exercise index and variant index, so these are also reset
+    commit('setExerciseIdx', 0)
+    commit('setVariantIdx', 0)
+  },
   updateLoading: ({ commit }, bool) => {
     commit('setLoading', bool)
   },
   updateError: ({ commit }, err) => {
     commit('setError', err)
+  },
+  handleNextExercise: ({ dispatch, getters }) => {
+    if (getters.isLastGroup && getters.isLastExercise) {
+      return
+    }
+    if (getters.isLastExercise) {
+      return dispatch('updateGroup', 1)
+    }
+    dispatch('updateExercise', 1)
+  },
+  handlePrevExercise: ({ dispatch, getters, state }) => {
+    if (getters.exerciseGlobalIdx === 0) return
+    if (state.exerciseIdx === 0) return dispatch('updateGroup', -1)
+    dispatch('updateExercise', -1)
   }
 }
 

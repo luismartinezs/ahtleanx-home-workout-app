@@ -194,6 +194,7 @@ Design
 - [ ] Tweak fonts to make them a bit better
 - [ ] Tweak color palette, perhaps decrease contrast
 - [ ] Make timer have circumference with moving circle around
+- [ ] Use colors to distinguish different groups
 
 User experience
 - [ ] At end of workout give option to repeat again
