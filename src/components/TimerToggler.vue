@@ -1,16 +1,17 @@
 <template>
-  <div id="timerToggler" @click="handleTimerToggle" />
+  <div id="timerToggler" :class="enabled ? '' : 'hidden'" @click="handleTimer" />
 </template>
 
 <script>
-import { eventBus } from '@/eventBus.js'
+import { createNamespacedHelpers } from 'vuex'
+
+const { mapActions, mapState } = createNamespacedHelpers('timer')
 
 export default {
   name: 'TimerToggler',
+  computed: mapState(['enabled']),
   methods: {
-    handleTimerToggle () {
-      eventBus.$emit('toggle-timer')
-    }
+    ...mapActions(['handleTimer'])
   }
 }
 </script>

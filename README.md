@@ -163,13 +163,14 @@ Group:
 ### MVP:
 
 User experience:
-- [ ] App displays all exercises for A and B sequentially
-- [ ] The last 5 seconds, once per second sound alarm
-- [ ] When timer reaches 0 sound longer alarm than in last 5 seconds
+- [x] App displays all exercises for A and B sequentially
+- [x] The last 5 seconds, once per second sound alarm
+- [x] When timer reaches 0 sound longer alarm than in last 5 seconds
 - [ ] App displays well on mobile
 - [ ] App looks the same on desktop as it does on mobile, with mobile max width and some reasonable max height
-- [ ] When timer reaches zero, automatically switch to next group / exercise
-- [ ] When workout finishes, show complete screen
+- [x] When timer reaches zero, automatically switch to next group / exercise
+- [x] When workout finishes, show complete screen
+- [x] Clicking on the timer does not change it right out, one second elapses
 
 PWA:
 - [ ] Workouts can be accessed offline
@@ -179,9 +180,9 @@ Load data asynchronously
 - [x] Handle loading state
 
 Use Vuex store
-- [ ] Current exercise being grabbed from workout store
-- [ ] Replace eventbus emitters by store actions
-- [ ] Prev and next btns for exercises update store
+- [x] Current exercise being grabbed from workout store
+- [x] Replace eventbus emitters by store actions
+- [x] Prev and next btns for exercises update store
 
 Other:
 - [ ] Home gives credit to Athleanx

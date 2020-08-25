@@ -107,6 +107,8 @@ const actions = {
     commit('setError', err)
   },
   handleNextExercise: ({ dispatch, getters }) => {
+    dispatch('timer/resetTimer', {}, { root: true })
+
     if (getters.isLastGroup && getters.isLastExercise) {
       return
     }
