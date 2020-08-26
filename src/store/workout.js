@@ -81,7 +81,6 @@ const actions = {
   fetchWorkout: async ({ commit }, type) => {
     const workout = data[`workout_${type}`]
     await commit('setWorkout', workout)
-    console.log('Workout loaded')
   },
   updateType: ({ commit }, { type, direction }) => {
     type = type[0].toUpperCase() + type.slice(1)
@@ -106,8 +105,8 @@ const actions = {
   updateError: ({ commit }, err) => {
     commit('setError', err)
   },
-  handleNextExercise: ({ dispatch, getters }) => {
-    dispatch('timer/resetTimer', {}, { root: true })
+  handleNextExercise: async ({ dispatch, getters }) => {
+    await dispatch('timer/resetTimer', {}, { root: true })
 
     if (getters.isLastGroup && getters.isLastExercise) {
       return
@@ -117,7 +116,9 @@ const actions = {
     }
     dispatch('updateExercise', 1)
   },
-  handlePrevExercise: ({ dispatch, getters, state }) => {
+  handlePrevExercise: async ({ dispatch, getters, state }) => {
+    await dispatch('timer/resetTimer', {}, { root: true })
+
     if (getters.exerciseGlobalIdx === 0) return
     if (state.exerciseIdx === 0) return dispatch('updateGroup', -1)
     dispatch('updateExercise', -1)

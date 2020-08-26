@@ -190,7 +190,8 @@ Other:
 - [x] Home gives credit to Athleanx
 
 Issues:
-- [ ] Timer doesn't reset when switching exercise
+- [x] Timer doesn't reset when switching exercise
+- [ ] All videos are always same size
 
 ### Nice to have:
 

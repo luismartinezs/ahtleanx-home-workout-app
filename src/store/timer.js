@@ -1,4 +1,4 @@
-const INITIAL_TIME = 6 * 1000 + 999 // miliseconds. Add 999 ms so that one second elapses when toggling timer, before switching to next second
+const INITIAL_TIME = 60 * 1000 + 999 // miliseconds. Add 999 ms so that one second elapses when toggling timer, before switching to next second
 const REFRESH_RATE = 100 // ms
 const ALARMS_COUNT = 5 // number of lasting seconds that will have alarm (if set to 5, last 5 seconds will have alarm)
 
@@ -68,7 +68,7 @@ const actions = {
     }, 1000)
   },
   resetTimer: ({ commit }) => {
-    countdown = null
+    clearInterval(countdown)
     commit('setPaused', true)
     commit('setStarted', false)
     commit('setCurrentTime', INITIAL_TIME)
