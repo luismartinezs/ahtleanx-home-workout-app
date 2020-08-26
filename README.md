@@ -172,8 +172,8 @@ User experience:
 - [x] When timer reaches zero, automatically switch to next group / exercise
 - [x] When workout finishes, show complete screen
 - [x] Clicking on the timer does not change it right out, one second elapses
-- [ ] Keep in localStorage last workout done
-- [ ] In home indicate which was the last workout done
+- [x] Keep in localStorage last workout done
+- [x] In home indicate which was the last workout done
 
 PWA:
 - [ ] Workouts can be accessed offline
