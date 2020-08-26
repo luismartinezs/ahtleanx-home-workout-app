@@ -3,8 +3,8 @@
     <p>
       Good job, you have completed one round of the workout!
     </p>
-    <a class="btn btn-primary mt-6 w-96" :href="`/workout/${$route.params.day}`">Do another round</a>
-    <a class="btn btn-secondary mt-6 w-96" href="/">I'm finished</a>
+    <a class="btn btn-primary mt-6 w-full" :href="`/workout/${$route.params.day}`">Do another round</a>
+    <a class="btn btn-secondary mt-6 w-full" href="/">I'm finished</a>
   </div>
 </template>
 

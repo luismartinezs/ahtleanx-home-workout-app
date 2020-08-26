@@ -186,8 +186,11 @@ Use Vuex store
 - [x] Prev and next btns for exercises update store
 
 Other:
-- [ ] Burger menu opens drawer
-- [ ] Home gives credit to Athleanx
+- [x] Burger menu opens drawer
+- [x] Home gives credit to Athleanx
+
+Issues:
+- [ ] Timer doesn't reset when switching exercise
 
 ### Nice to have:
 
@@ -212,6 +215,9 @@ User experience
   - [ ] Switch variant with a swipe (so prev and next btns can be removed on mobile)
   - [ ] Add red border around current variant
   - [ ] Swiping does not trigger timer
+- [ ] FAQ page
+- [ ] Contact
+- [ ] Donate
 
 Statistics
 - [ ] Keep track of workouts and days in calendar
