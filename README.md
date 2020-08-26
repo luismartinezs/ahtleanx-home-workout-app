@@ -191,7 +191,7 @@ Other:
 
 Issues:
 - [x] Timer doesn't reset when switching exercise
-- [ ] All videos are always same size
+- [x] All videos are always same size
 
 ### Nice to have:
 

@@ -1,8 +1,8 @@
 <template>
-  <div class="py-4 mx-auto text-center" style="max-width: 300px;">
+  <div class="py-4 mx-auto text-center flex flex-col items-center" style="max-width: 300px;">
     <span class="uppercase block mb-1">{{ group.name }}</span>
     <div
-      class="relative bg-gray-900 pb-11/20 border-red-300 rounded-lg overflow-hidden mb-1"
+      class="relative bg-gray-900 pb-11/20 border-red-300 rounded-lg overflow-hidden mb-1 w-80"
     >
       <video
         :key="variant.video"
@@ -15,10 +15,12 @@
         Sorry, your browser doesn't support embedded videos.
       </video>
     </div>
-    <span class="text-gray-400">{{ variant.name }}&nbsp;</span>
-    <span class="inline-block text-gray-600"
-      >&nbsp;-&nbsp;{{ variant.label }}
-    </span>
+    <div>
+      <span class="text-gray-400">{{ variant.name }}&nbsp;</span>
+      <span class="inline-block text-gray-600"
+        >&nbsp;-&nbsp;{{ variant.label }}
+      </span>
+    </div>
   </div>
 </template>
 
