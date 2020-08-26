@@ -1,14 +1,14 @@
 <template>
-  <div class="relative h-full flex flex-col">
+  <div class="relative h-full lg:h-auto flex flex-col">
     <div v-if="isLoading">
       LOADING....
     </div>
     <template v-else>
       <VariantToggler class="z-20 w-full flex justify-around mt-2 text-xs" />
-      <ExerciseDisplay class="h-1/2" />
+      <ExerciseDisplay />
       <TheTimer />
       <TimerToggler class="absolute h-full w-full z-10 bg-transparent top-0" />
-      <WorkoutNav class="z-20 mt-auto" />
+      <WorkoutNav class="z-20 mt-auto lg:mt-20" />
     </template>
   </div>
 </template>

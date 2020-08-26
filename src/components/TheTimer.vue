@@ -1,13 +1,13 @@
 <template>
-  <div
-    class="flex flex-col justify-center items-center"
-  >
-    <span class="text-10xl">
-      {{ timer }}
-    </span>
-    <span class="text-xl">
-      {{ message }}
-    </span>
+  <div class="flex flex-col items-center flex-1 mb-16 lg:mb-0">
+    <div class="my-auto flex flex-col text-center">
+      <span class="text-10xl leading-tight">
+        {{ timer }}
+      </span>
+      <span class="text-xl">
+        {{ message }}
+      </span>
+    </div>
   </div>
 </template>
 

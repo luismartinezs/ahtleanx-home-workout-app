@@ -1,8 +1,8 @@
 <template>
-  <div class="py-6 px-16">
-    <span class="uppercase block mb-1 text-center">{{ group.name }}</span>
+  <div class="py-4 mx-auto text-center" style="max-width: 300px;">
+    <span class="uppercase block mb-1">{{ group.name }}</span>
     <div
-      class="relative bg-gray-900 pb-2/3 border-red-300 rounded-lg overflow-hidden mb-1"
+      class="relative bg-gray-900 pb-11/20 border-red-300 rounded-lg overflow-hidden mb-1"
     >
       <video
         :key="variant.video"
@@ -11,10 +11,7 @@
         autoplay="true"
         class="absolute h-full w-full object-cover"
       >
-        <source
-          :src="videoSrc"
-          type="video/mp4"
-        />
+        <source :src="videoSrc" type="video/mp4" />
         Sorry, your browser doesn't support embedded videos.
       </video>
     </div>
