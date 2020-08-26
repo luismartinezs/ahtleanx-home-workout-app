@@ -18,8 +18,13 @@
         >
       </div>
     </div>
-    <div class="mt-20 text-xl text-gray-700 text-center leading-relaxed">
+    <div class="mt-10 text-xl text-gray-700 text-center leading-relaxed">
       <p>
+        Looks like it's time for workout
+        <span class="uppercase text-gray-400">{{ nextWorkout }}</span
+        >!
+      </p>
+      <p class="mt-4">
         Watch the Athlean-X video that explains the workout, if it's the first
         time you use this app:
         <a
@@ -34,7 +39,19 @@
 </template>
 
 <script>
+const lastWorkout = localStorage.getItem('last-workout')
 export default {
-  name: 'Home'
+  name: 'Home',
+  data () {
+    return {
+      lastWorkout
+    }
+  },
+  computed: {
+    nextWorkout () {
+      const workoutSuccession = { a: 'b', b: 'a' }
+      return workoutSuccession[this.lastWorkout]
+    }
+  }
 }
 </script>
