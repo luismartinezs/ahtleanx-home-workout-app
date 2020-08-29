@@ -204,7 +204,7 @@ Issues:
 - [x] When going to prev exercise, sometimes it goes to 1st exercise of previous group, instead of last one
 - [x] Last exercise end goes to completed page
 - [x] Other round button breaks, all internal links must be router-link
-- [ ] Pause screen is semi-transparent
+- [x] Pause screen is semi-transparent
 
 ### Nice to have:
 

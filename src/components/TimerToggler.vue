@@ -1,5 +1,5 @@
 <template>
-  <div id="timerToggler" :class="enabled ? '' : 'hidden'" @click="handleTimer" />
+  <div id="timerToggler" :class="{hidden: !enabled, 'bg-white opacity-25': started && paused}" @click="handleTimer" />
 </template>
 
 <script>
@@ -9,7 +9,7 @@ const { mapActions, mapState } = createNamespacedHelpers('timer')
 
 export default {
   name: 'TimerToggler',
-  computed: mapState(['enabled']),
+  computed: mapState(['enabled', 'paused', 'started']),
   methods: {
     ...mapActions(['handleTimer'])
   }

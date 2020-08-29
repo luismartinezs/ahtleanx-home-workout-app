@@ -7,7 +7,7 @@
       <VariantToggler class="z-20 w-full flex justify-around mt-2 text-xs" />
       <ExerciseDisplay />
       <TheTimer />
-      <TimerToggler class="absolute h-full w-full z-10 bg-transparent top-0" />
+      <TimerToggler class="absolute h-full w-full z-10 top-0" />
       <WorkoutNav class="z-20 mt-auto lg:mt-20" />
     </template>
   </div>

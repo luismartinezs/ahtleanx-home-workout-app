@@ -7,7 +7,7 @@ const state = {
   paused: true,
   started: false,
   alarmsCount: ALARMS_COUNT,
-  enabled: true
+  enabled: true // If the timer toggler should be toggleable or not in the current screen
 }
 
 const mutations = {
