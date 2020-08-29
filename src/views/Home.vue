@@ -39,7 +39,8 @@
 </template>
 
 <script>
-const lastWorkout = localStorage.getItem('last-workout')
+const lastWorkout = localStorage.getItem('last-workout') || 'b'
+
 export default {
   name: 'Home',
   data () {

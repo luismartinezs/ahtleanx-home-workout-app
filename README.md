@@ -176,7 +176,8 @@ User experience:
 - [x] In home indicate which was the last workout done
 
 PWA:
-- [ ] Workouts can be accessed offline
+- [ ] Deploy app in netlify and run performance audit
+- [ ] Workouts can be accessed offline (PWA)
 
 Load data asynchronously
 - [x] Load data ascynchronously (an async function)
