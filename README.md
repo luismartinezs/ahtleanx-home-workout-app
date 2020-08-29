@@ -205,6 +205,7 @@ Design
 - [ ] Tweak color palette, perhaps decrease contrast
 - [ ] Make timer have circumference with moving circle around
 - [ ] Use colors to distinguish different groups
+- [ ] Refactor: set default styles once for links and text (color, size, etc) instead of defining them for each component separately
 
 User experience
 - [x] At end of workout give option to repeat again

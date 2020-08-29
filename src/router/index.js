@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 const Home = () => import('@/views/Home.vue')
 const Workout = () => import('@/views/Workout.vue')
 const CompletedWorkout = () => import('@/views/CompletedWorkout.vue')
+const Contact = () => import('@/views/Contact.vue')
 const Dev = () => import('@/views/Dev.vue')
 
 Vue.use(VueRouter)
@@ -27,6 +28,11 @@ const routes = [
     path: '/workout/:day',
     name: 'Workout',
     component: Workout
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   },
   {
     path: '*',
