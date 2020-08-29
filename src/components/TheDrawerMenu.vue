@@ -5,30 +5,31 @@
   >
     <ul>
       <li
+        @click="setMenuState(false)"
         v-for="{ label, link, external } in menu"
         :key="label"
         class="mt-8 first:mt-0 underline"
       >
-        <a :href="link" :target="external ? '_blank' : '_self'">
+        <router-link v-if="!external" :to="link">{{ label }} </router-link>
+
+        <a v-if="external" :href="link" target="_blank">
           <span>
             {{ label }}
           </span>
 
-          <span v-if="external">
-            <svg
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              class="h-6 w-6 inline-block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </span>
+          <svg
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="h-6 w-6 inline-block"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
         </a>
       </li>
     </ul>
@@ -36,7 +37,9 @@
 </template>
 
 <script>
-import bus from '@/event-bus.js'
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapMutations } = createNamespacedHelpers('menu')
+
 export default {
   name: 'TheDrawerMenu',
   data () {
@@ -64,23 +67,16 @@ export default {
         },
         {
           label: 'Athlean-x website',
-          link: 'https://athleanx.com/?utm_medium=athleanx-perfect-home-workout-app&utm_source=' + window.location.href + 'utm_campaign=app-launch',
+          link:
+            'https://athleanx.com/?utm_medium=athleanx-perfect-home-workout-app&utm_source=' +
+            window.location.href +
+            'utm_campaign=app-launch',
           external: true
         }
-      ],
-      isOpen: false
+      ]
     }
   },
-  methods: {
-    handleMenu (shouldOpen) {
-      this.isOpen = shouldOpen
-    }
-  },
-  mounted () {
-    bus.$on('handle-menu', this.handleMenu)
-  },
-  beforeDestroy () {
-    bus.$off('handle-menu', this.handleMenu)
-  }
+  computed: mapState(['isOpen']),
+  methods: mapMutations(['setMenuState'])
 }
 </script>

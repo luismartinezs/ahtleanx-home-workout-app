@@ -5,7 +5,7 @@
         Athleanx perfect home workout
       </h1>
     </div>
-    <div @click="toggleMenu">
+    <div @click="setMenuState(!isOpen)">
       <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
         <path
           v-if="isOpen"
@@ -23,20 +23,12 @@
 </template>
 
 <script>
-import bus from '@/event-bus.js'
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapMutations } = createNamespacedHelpers('menu')
 
 export default {
   name: 'TheHeader',
-  data () {
-    return {
-      isOpen: false
-    }
-  },
-  methods: {
-    toggleMenu () {
-      this.isOpen = !this.isOpen
-      bus.$emit('handle-menu', this.isOpen)
-    }
-  }
+  computed: mapState(['isOpen']),
+  methods: mapMutations(['setMenuState'])
 }
 </script>
