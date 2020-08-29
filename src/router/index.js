@@ -4,7 +4,6 @@ const Home = () => import('@/views/Home.vue')
 const Workout = () => import('@/views/Workout.vue')
 const CompletedWorkout = () => import('@/views/CompletedWorkout.vue')
 const Contact = () => import('@/views/Contact.vue')
-const Dev = () => import('@/views/Dev.vue')
 
 Vue.use(VueRouter)
 
@@ -13,11 +12,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/dev',
-    name: 'Dev',
-    component: Dev
   },
   {
     path: '/workout/:day/complete',

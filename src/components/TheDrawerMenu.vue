@@ -48,6 +48,11 @@ export default {
           external: false
         },
         {
+          label: 'Contact',
+          link: '/contact',
+          external: false
+        },
+        {
           label: 'The PERFECT Home Workout ATHLEANX YouTube video',
           link: 'https://www.youtube.com/watch?v=vc1E5CfRfos',
           external: true
