@@ -174,10 +174,14 @@ User experience:
 - [x] Clicking on the timer does not change it right out, one second elapses
 - [x] Keep in localStorage last workout done
 - [x] In home indicate which was the last workout done
+- [x] Mobile view shows everything without need to scroll
 
 PWA:
-- [ ] Deploy app in netlify and run performance audit
+- [x] Deploy app in netlify and run performance audit
 - [ ] Workouts can be accessed offline (PWA)
+
+- [ ] Remove tests
+- [ ] Clean up unused files
 
 Load data asynchronously
 - [x] Load data ascynchronously (an async function)

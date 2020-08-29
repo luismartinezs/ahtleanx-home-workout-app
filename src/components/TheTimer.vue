@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-col items-center flex-1 mb-16 lg:mb-0">
+  <div class="flex flex-col items-center flex-1 mb-12 lg:mb-0">
     <div class="my-auto flex flex-col text-center">
-      <span class="text-10xl leading-tight">
+      <span class="text-8xl leading-tight">
         {{ timer }}
       </span>
-      <span class="text-xl">
+      <span class="text-lg">
         {{ message }}
       </span>
     </div>
