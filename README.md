@@ -200,6 +200,12 @@ Issues:
 - [x] Timer doesn't reset when switching exercise
 - [x] All videos are always same size
 
+- [x] Fix video ordering (some videos are not matching the exercise)
+- [x] When going to prev exercise, sometimes it goes to 1st exercise of previous group, instead of last one
+- [x] Last exercise end goes to completed page
+- [x] Other round button breaks, all internal links must be router-link
+- [ ] Pause screen is semi-transparent
+
 ### Nice to have:
 
 Design

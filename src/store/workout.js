@@ -1,3 +1,4 @@
+import router from '../router'
 import data from '@/data.json'
 
 const state = {
@@ -105,11 +106,14 @@ const actions = {
   updateError: ({ commit }, err) => {
     commit('setError', err)
   },
-  handleNextExercise: async ({ dispatch, getters }) => {
+  handleNextExercise: async ({ dispatch, getters, rootState }) => {
     await dispatch('timer/resetTimer', {}, { root: true })
 
     if (getters.isLastGroup && getters.isLastExercise) {
-      return
+      return router.push({
+        name: 'CompletedWorkout',
+        params: rootState.route.params
+      })
     }
     if (getters.isLastExercise) {
       return dispatch('updateGroup', 1)
@@ -120,7 +124,13 @@ const actions = {
     await dispatch('timer/resetTimer', {}, { root: true })
 
     if (getters.exerciseGlobalIdx === 0) return
-    if (state.exerciseIdx === 0) return dispatch('updateGroup', -1)
+    if (state.exerciseIdx === 0) {
+      dispatch('updateGroup', -1)
+      // We need to go to last exercise of previous group
+      for (let i = 0; i < getters.getExercisesLength; i++) {
+        dispatch('updateExercise', 1)
+      }
+    }
     dispatch('updateExercise', -1)
   }
 }

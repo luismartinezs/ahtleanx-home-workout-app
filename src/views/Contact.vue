@@ -1,7 +1,7 @@
 <template>
   <div class="mx-12 mt-12 text-xl text-gray-400">
     <p class="mt-2">
-      Say hello at
+      Found a bug? Have an idea? Wanna say hello?
       <a
         href="mailto:luismartinezwebdev@gmail.com"
         alt="my email"

@@ -3,12 +3,14 @@
     <p>
       Good job, you have completed one round of the workout!
     </p>
-    <a
+    <router-link
       class="btn btn-primary mt-6 w-full"
-      :href="`/workout/${$route.params.day}`"
-      >Do another round</a
+      :to="{ name: 'Workout', params: $route.params }"
+      >Do another round</router-link
     >
-    <a class="btn btn-secondary mt-6 w-full" href="/">I'm finished</a>
+    <router-link class="btn btn-secondary mt-6 w-full" to="{name: 'Home'}"
+      >I'm finished</router-link
+    >
   </div>
 </template>
 

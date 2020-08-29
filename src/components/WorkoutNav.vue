@@ -36,9 +36,9 @@ export default {
       this.handlePrevExercise()
     },
     handleNext () {
-      if (this.isLastGroup && this.isLastExercise) {
-        return this.$router.push({ name: 'CompletedWorkout', params: { ...this.$route.params } })
-      }
+      // if (this.isLastGroup && this.isLastExercise) {
+      //   return this.$router.push({ name: 'CompletedWorkout', params: { ...this.$route.params } })
+      // }
       this.handleNextExercise()
     }
   }
