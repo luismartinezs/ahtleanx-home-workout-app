@@ -16,12 +16,30 @@ import TheHeader from '@/components/TheHeader.vue'
 import Default from '@/layouts/Default.vue'
 import TheDrawerMenu from '@/components/TheDrawerMenu.vue'
 
+const isLocal = /localhost/.test(window.location.href)
+
+const addGtmScript = () => {
+  const gtmScript = document.createElement('script')
+  const gtmScriptPlaceholder = document.getElementById('gtmScriptPlaceholder')
+  gtmScript.async = true
+  gtmScript.setAttribute(
+    'src',
+    'https://www.googletagmanager.com/gtag/js?id=UA-164945954-2'
+  )
+  gtmScriptPlaceholder.replaceWith(gtmScript)
+}
+
 export default {
   name: 'App',
   components: {
     TheHeader,
     Default,
     TheDrawerMenu
+  },
+  mounted () {
+    if (!isLocal) {
+      addGtmScript()
+    }
   }
 }
 </script>

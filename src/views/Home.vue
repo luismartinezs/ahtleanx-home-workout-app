@@ -25,8 +25,8 @@
         >!
       </p>
       <p class="mt-4">
-        Watch the Athlean-X video that explains the workout, if it's the first
-        time you use this app:
+        If it's the first
+        time you use this app, watch the Athlean-X video that explains the workout:
         <a
           href="https://www.youtube.com/watch?v=vc1E5CfRfos"
           target="_blank"
