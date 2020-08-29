@@ -32,7 +32,6 @@ const getters = {
 let countdown = null
 
 const actions = {
-  togglePause: ({ commit, state }) => commit('setPaused', !state.paused),
   handleTimer: ({ dispatch, commit, state }) => {
     commit('setStarted', true)
     commit('setPaused', !state.paused)
