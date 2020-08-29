@@ -29,6 +29,7 @@
         time you use this app:
         <a
           href="https://www.youtube.com/watch?v=vc1E5CfRfos"
+          target="_blank"
           alt="The PERFECT Home Workout"
           class="underline text-gray-600 hover:text-gray-400"
           >The PERFECT Home Workout</a
