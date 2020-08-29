@@ -27,6 +27,11 @@ const routes = [
     path: '/workout/:day',
     name: 'Workout',
     component: Workout
+  },
+  {
+    path: '*',
+    name: 'Home',
+    component: Home
   }
 ]
 
