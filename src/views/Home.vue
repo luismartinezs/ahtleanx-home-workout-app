@@ -31,6 +31,7 @@
           >The PERFECT Home Workout</a
         >
       </p>
+      <p>Install the app in your phone for an optimal experience.</p>
     </div>
   </div>
 </template>
