@@ -21,6 +21,10 @@
       >
       by Athlean-X.
     </p>
+    <br />
+    <p>
+      This is an unofficial app. I am not affiliated with Athlean-X in any way or form, although I love their home workout. I built this app by and for myself. If you don't like it, blame me, not them.
+    </p>
   </div>
 </template>
 

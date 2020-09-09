@@ -55,7 +55,7 @@ Issues:
 - [x] Other round button breaks, all internal links must be router-link
 - [x] Pause screen is semi-transparent
 - [x] Another round button doesnt reset exercises index to 0
-- [ ] Message" I am not affiliated to AthleanX
+- [x] Message" I am not affiliated to AthleanX
 
 ### Nice to have:
 
