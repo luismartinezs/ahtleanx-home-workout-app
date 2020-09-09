@@ -43,6 +43,7 @@ Use Vuex store
 Other:
 - [x] Burger menu opens drawer
 - [x] Home gives credit to Athleanx
+- [ ] Add accept cookies modal
 
 Issues:
 - [x] Timer doesn't reset when switching exercise
@@ -53,8 +54,14 @@ Issues:
 - [x] Last exercise end goes to completed page
 - [x] Other round button breaks, all internal links must be router-link
 - [x] Pause screen is semi-transparent
+- [x] Another round button doesnt reset exercises index to 0
+- [ ] Message" I am not affiliated to AthleanX
 
 ### Nice to have:
+
+Reach
+- [ ] Share icons in menu
+- [ ] Share workout in Instagram when workout is finished, with custom message
 
 Design
 - [x] Make 'home' a bit nicer
@@ -79,7 +86,6 @@ User experience
   - [ ] Swiping does not trigger timer
 - [ ] FAQ page
 - [x] Contact
-- [ ] Donate
 - [ ] User login and save user data in their google drive or in a DB
 
 Statistics
@@ -87,3 +93,6 @@ Statistics
 - [ ] Keep track of number of times workout is done per session
 - [ ] Keep track of number of 'pauses' in each exercise, and have some measure of improvement
 - [ ] Give audio cues when an exercise performance is going to be improved on
+
+Infrastructure
+- [ ] Host media in S3

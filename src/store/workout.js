@@ -1,13 +1,17 @@
 import router from '../router'
 import data from '@/data.json'
 
-const state = {
+const initialState = {
   exerciseIdx: 0,
   variantIdx: 0,
   groupIdx: 0,
   workout: {},
   isLoading: true,
   error: null
+}
+
+const state = {
+  ...initialState
 }
 
 const mutations = {
@@ -132,6 +136,11 @@ const actions = {
       }
     }
     dispatch('updateExercise', -1)
+  },
+  resetWorkout: ({ commit }) => {
+    commit('setVariantIdx', 0)
+    commit('setExerciseIdx', 0)
+    commit('setGroupIdx', 0)
   }
 }
 
