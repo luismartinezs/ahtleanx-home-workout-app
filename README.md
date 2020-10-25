@@ -62,6 +62,7 @@ Issues:
 Reach
 - [ ] Share icons in menu
 - [ ] Share workout in Instagram when workout is finished, with custom message
+- [ ] Links to my facebook and twitter
 
 Design
 - [x] Make 'home' a bit nicer

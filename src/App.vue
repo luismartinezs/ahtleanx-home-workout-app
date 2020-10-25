@@ -8,6 +8,7 @@
     <Default class="flex-auto">
       <router-view />
     </Default>
+    <CookiesModal />
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 import TheHeader from '@/components/TheHeader.vue'
 import Default from '@/layouts/Default.vue'
 import TheDrawerMenu from '@/components/TheDrawerMenu.vue'
+import CookiesModal from '@/components/CookiesModal.vue'
 
 const isLocal = /localhost/.test(window.location.href)
 
@@ -34,7 +36,8 @@ export default {
   components: {
     TheHeader,
     Default,
-    TheDrawerMenu
+    TheDrawerMenu,
+    CookiesModal
   },
   mounted () {
     if (!isLocal) {
@@ -44,5 +47,4 @@ export default {
 }
 </script>
 
-<style src="./style/tailwind.css">
-</style>
+<style src="./style/tailwind.css"></style>
