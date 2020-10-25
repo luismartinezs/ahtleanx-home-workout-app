@@ -67,7 +67,7 @@ export default {
   methods: {
     handleScripts () {
       if (isLocal) {
-        return
+        return deleteScriptPlaceholders()
       }
       console.log('handleScripts')
       if (localStorage.getItem(ACCEPT_GA_TRACKING) === 'true') {

@@ -28,8 +28,8 @@ PWA:
 - [x] Deploy app in netlify and run performance audit
 - [x] Workouts can be accessed offline (PWA)
 
-- [ ] Remove tests
-- [ ] Clean up unused files
+- [x] Remove tests
+- [x] Clean up unused files
 
 Load data asynchronously
 - [x] Load data ascynchronously (an async function)
@@ -43,7 +43,7 @@ Use Vuex store
 Other:
 - [x] Burger menu opens drawer
 - [x] Home gives credit to Athleanx
-- [ ] Add accept cookies modal
+- [x] Add accept cookies modal
 
 Issues:
 - [x] Timer doesn't reset when switching exercise
