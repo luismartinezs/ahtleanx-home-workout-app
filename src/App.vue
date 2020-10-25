@@ -17,6 +17,7 @@ import TheHeader from '@/components/TheHeader.vue'
 import Default from '@/layouts/Default.vue'
 import TheDrawerMenu from '@/components/TheDrawerMenu.vue'
 import CookiesModal from '@/components/CookiesModal.vue'
+import { ACCEPT_GA_TRACKING } from '@/constant.js'
 
 const isLocal = /localhost/.test(window.location.href)
 
@@ -31,6 +32,26 @@ const addGtmScript = () => {
   gtmScriptPlaceholder.replaceWith(gtmScript)
 }
 
+const addGoogleAnalyticsScript = () => {
+  const gaScript = document.createElement('script')
+  const gaScriptPlaceholder = document.getElementById('gaScriptPlaceholder')
+  gaScript.text = `window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "UA-164945954-2");`
+  gaScriptPlaceholder.replaceWith(gaScript)
+}
+
+const deleteScriptPlaceholders = () => {
+  const placeholders = Array.from(
+    document.querySelectorAll('[id$=Placeholder]')
+  )
+  placeholders.forEach(el => el.remove())
+}
+
 export default {
   name: 'App',
   components: {
@@ -40,8 +61,12 @@ export default {
     CookiesModal
   },
   mounted () {
-    if (!isLocal) {
+    if (!isLocal && localStorage.getItem(ACCEPT_GA_TRACKING) === 'true') {
       addGtmScript()
+      addGoogleAnalyticsScript()
+    }
+    if (localStorage.getItem(ACCEPT_GA_TRACKING) === 'false') {
+      deleteScriptPlaceholders()
     }
   }
 }
