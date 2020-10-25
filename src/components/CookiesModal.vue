@@ -28,6 +28,9 @@
 
 <script>
 import { ACCEPT_GA_TRACKING } from '@/constant.js'
+import { createNamespacedHelpers } from 'vuex'
+
+const { mapMutations } = createNamespacedHelpers('app')
 
 export default {
   name: 'CookiesModal',
@@ -37,13 +40,16 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['setUpdateCookies']),
     acceptTracking () {
       localStorage.setItem(ACCEPT_GA_TRACKING, 'true')
       this.closeModal()
+      this.setUpdateCookies()
     },
     disallowTracking () {
       localStorage.setItem(ACCEPT_GA_TRACKING, 'false')
       this.closeModal()
+      this.setUpdateCookies()
     },
     closeModal () {
       this.showModal = false

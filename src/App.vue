@@ -18,6 +18,9 @@ import Default from '@/layouts/Default.vue'
 import TheDrawerMenu from '@/components/TheDrawerMenu.vue'
 import CookiesModal from '@/components/CookiesModal.vue'
 import { ACCEPT_GA_TRACKING } from '@/constant.js'
+import { createNamespacedHelpers } from 'vuex'
+
+const { mapState } = createNamespacedHelpers('app')
 
 const isLocal = /localhost/.test(window.location.href)
 
@@ -60,13 +63,28 @@ export default {
     TheDrawerMenu,
     CookiesModal
   },
-  mounted () {
-    if (!isLocal && localStorage.getItem(ACCEPT_GA_TRACKING) === 'true') {
-      addGtmScript()
-      addGoogleAnalyticsScript()
+  computed: mapState(['updateCookies']),
+  methods: {
+    handleScripts () {
+      if (isLocal) {
+        return
+      }
+      console.log('handleScripts')
+      if (localStorage.getItem(ACCEPT_GA_TRACKING) === 'true') {
+        addGtmScript()
+        addGoogleAnalyticsScript()
+      }
+      if (localStorage.getItem(ACCEPT_GA_TRACKING) === 'false') {
+        deleteScriptPlaceholders()
+      }
     }
-    if (localStorage.getItem(ACCEPT_GA_TRACKING) === 'false') {
-      deleteScriptPlaceholders()
+  },
+  mounted () {
+    this.handleScripts()
+  },
+  watch: {
+    updateCookies () {
+      this.handleScripts()
     }
   }
 }
