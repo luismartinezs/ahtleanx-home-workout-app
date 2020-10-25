@@ -3,12 +3,12 @@
     id="app"
     class="text-gray-100 bg-black h-screen flex flex-col justify-between"
   >
-    <TheHeader class="z-40" />
-    <TheDrawerMenu class="z-30" />
+    <TheHeader class="z-50" />
+    <TheDrawerMenu class="z-40" />
     <Default class="flex-auto">
       <router-view />
     </Default>
-    <CookiesModal />
+    <CookiesModal class="z-30" />
   </div>
 </template>
 
