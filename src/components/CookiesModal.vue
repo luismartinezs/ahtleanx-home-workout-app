@@ -2,27 +2,27 @@
   <transition appear name="slideFromBottom">
     <div
       v-if="showModal"
-      class="mx-auto w-full w-screen lg:max-w-md absolute bottom-0 left-0 right-0 bg-red-700 py-3 px-3 sm:px-16 md:px-32 lg:px-3 text-center"
+      class="mx-auto w-full w-screen lg:max-w-md absolute bottom-0 left-0 right-0 bg-red-600 py-3 px-3 sm:px-16 md:px-32 lg:px-3 text-center"
     >
-      <p>
+      <p class="text-red-200">
         This website sends anonymous navigation data to Google Analytics. It
         helps me see how many people are using it and where they come from.
       </p>
       <div class="flex flex-col">
-        <div class="mt-3 py-3">
+        <button
+          @click.prevent="acceptTracking"
+          class="btn btn-secondary bg-black normal-case mt-4"
+        >
+          OK
+        </button>
+        <div class="mt-2 sm:py-3 text-red-200">
           <span
             @click.prevent="disallowTracking"
             class="normal-case  underline text-sm cursor-pointer"
           >
-            No. Don't send data to Google Analytics
+            No. I don't want to send any anonymous data to Google Analytics
           </span>
         </div>
-        <button
-          @click.prevent="acceptTracking"
-          class="btn btn-secondary bg-black normal-case mt-3"
-        >
-          Yes, I'm OK with sending anonymous<br />data to Google Analytics
-        </button>
       </div>
     </div>
   </transition>
