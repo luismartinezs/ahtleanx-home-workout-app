@@ -59,6 +59,9 @@ Issues:
 
 ### Nice to have:
 
+Support
+- [ ] Add donation button
+
 Reach
 - [ ] Share icons in menu
 - [ ] Share workout in Instagram when workout is finished, with custom message
